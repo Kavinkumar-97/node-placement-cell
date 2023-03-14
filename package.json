@@ -1,0 +1,21 @@
+{
+  "name": "placement-cell",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kavinkumar-97/node-placement-cell.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kavinkumar-97/node-placement-cell/issues"
+  },
+  "homepage": "https://github.com/Kavinkumar-97/node-placement-cell#readme"
+}
