@@ -61,7 +61,7 @@ module.exports.allocateStudent = async (req, res) => {
       student.save();
       interview.save();
 
-      return res.send(200).redirect('back');
+      return res.redirect('back');
     } else {
       return res.status(401).send('Unable to create a interview');
     }

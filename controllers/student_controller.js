@@ -24,7 +24,15 @@ module.exports.create = async (req, res) => {
       return res.send(401).send('Student Exists');
     }
 
-    const { email, name, college, batch, dsaFinalScore, webDFinalScore, reactFinalScore } = req.body;
+    const {
+      email,
+      name,
+      college,
+      batch,
+      dsaFinalScore,
+      webDFinalScore,
+      reactFinalScore,
+    } = req.body;
 
     student = await Student.create({
       email,
@@ -32,12 +40,14 @@ module.exports.create = async (req, res) => {
       college,
       batch,
       courseScores: {
-        dsaFinalScore: parseInt(dsaFinalScore), webDFinalScore: parseInt(webDFinalScore), reactFinalScore: parseInt(reactFinalScore)
-      }
+        dsaFinalScore: parseInt(dsaFinalScore),
+        webDFinalScore: parseInt(webDFinalScore),
+        reactFinalScore: parseInt(reactFinalScore),
+      },
     });
 
     if (student) {
-      return res.send(200).redirect('/students');
+      return res.redirect('/students');
     } else {
       return res.status(401).send('Unable to create a student');
     }
