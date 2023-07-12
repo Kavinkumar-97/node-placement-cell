@@ -38,6 +38,12 @@ const studentSchema = new mongoose.Schema(
         required: true,
       },
     },
+    interviews: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Interview',
+      },
+    ],
   },
   { timestamps: true }
 );

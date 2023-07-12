@@ -15,7 +15,7 @@ const resultSchema = new mongoose.Schema(
     result: {
       type: String,
       enum: ['pass', 'fail', 'on-hold', 'not-attempt'],
-      default: 'on-hold',
+      required: true,
     },
   },
   { timestamps: true }

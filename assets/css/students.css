@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#add-student {
+    background-color: #1f883d;
+    color: #fff;
+    padding-block:0.25rem;
+    font-size: 14px;
+    padding-inline: 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: center;
+}

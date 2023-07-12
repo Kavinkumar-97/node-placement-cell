@@ -4,3 +4,73 @@
   margin: 2rem auto;
   flex-direction: column;
 }
+
+.sign-in-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.sign-in-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sign-in-form-container {
+    maring-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 1.25rem;
+    margin-bottom: 10rem;
+}
+
+.sign-in-form-container > img {
+    margin-inline: auto;
+}
+
+.sign-in-form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.sign-in-form-heading {
+    text-align: center;
+}
+
+.sign-in-form-input, .sign-in-form-button {
+    height: 32px;
+    padding-inline: 0.75rem;
+    border-radius: 6px;
+}
+
+.sign-in-form label {
+    font-size: 14px;
+}
+
+.sign-in-form-input {
+    background-color: #fff;
+    border: 1px solid #aaa;
+}
+
+.sign-in-form-button {
+    border: none;
+    background-color: #1f883d;
+    color: white;
+    font-weight: 600;
+}
+
+.sign-up-container {
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.sign-up-container a {
+    text-decoration: none;
+}

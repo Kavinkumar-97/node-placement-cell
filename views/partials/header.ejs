@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="/css/header.css" />
 
+<% if(locals.user) { %>
+
 <div id="header">
   <a href="/">
-    <h6><i class="fa-solid fa-location-crosshairs"></i> Placement Cell</h6>
+    <img src="/images/logo.png" alt='Logo' width="125" />
   </a>
   <div class="header-actions">
     <a href="/interviews">Interviews</a>
@@ -20,3 +22,5 @@
 </div>
 
 <script src="/js/header.js"></script>
+
+<% } %>

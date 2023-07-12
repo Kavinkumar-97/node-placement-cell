@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/css/students.css" />
+
+<div class="container mt-4">
+  <div class="header">
+    <h2>Results</h2>
+    <form action="/reports/download" method="GET">
+        <button type="submit">Download Report</button>
+    </form>
+  </div>
+  <div class="student-table mt-3">
+    <% if (results.length == 0) { %> No Result found. <% } else { %>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Compamy</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">College</th>
+          <th scope="col">Batch</th>
+          <th scope="col">Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (result of results) {%>
+            <tr>
+                <th scope="col"><%= result.interview.company %></th>
+                <td scope="col"><%= result.student.name %></td>
+                <td scope="col"><%= result.student.email %></td>
+                <td scope="col"><%= result.student.college %></td>
+                <td scope="col"><%= result.student.batch %></td>
+                <td scope="col">
+                    <form action="/result/<%= result._id %>" method="POST">
+                        <select name="result" value="<%= result.result %>">
+                            <option value="on-hold" <%= result.result == "on-hold" ? "selected" : ""%> > On Hold </option>
+                            <option value="not-attempt" <%= result.result == "not-attempt" ? "selected" : ""%>> Not Attempt </option>
+                            <option value="pass" <%= result.result == "pass" ? "selected" : ""%>> Pass </option>
+                            <option value="fail"<%= result.result == "fail" ? "selected" : ""%>> Fail </option>
+                        </select>
+                        <button type="submit">Update</button>
+                    </form>
+                </td>
+            </tr>
+        <%}%>
+      </tbody>
+    </table>
+    <% } %>
+  </div>
+</div>

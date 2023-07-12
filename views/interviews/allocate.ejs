@@ -2,12 +2,15 @@
 
 <div class="container mt-4">
   <div class="header">
-    <h2>Students</h2>
-    <a href="/students/create" id="add-student" target="_blank" rel="noopener noreferrer">Add Student</a>
+    <h2>Allocate Students</h2>
   </div>
   <div class="student-table mt-3">
     <% if (students.length == 0) { %> No Students records found. Please create a
-    new student. <% } else { %>
+    new student.
+
+    <a href="/students/create" id="add-student" target="_blank" rel="noopener noreferrer">Add Student</a>
+
+     <% } else { %>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -18,7 +21,7 @@
           <th scope="col">Dsa</th>
           <th scope="col">Web</th>
           <th scope="col">React</th>
-          <th scope="col">Placement</th>
+          <th scope="col">Allocate Interview</th>
         </tr>
       </thead>
       <tbody>
@@ -31,7 +34,7 @@
                 <td scope="col"><%= student.courseScores.dsaFinalScore %></td>
                 <td scope="col"><%= student.courseScores.webDFinalScore %></td>
                 <td scope="col"><%= student.courseScores.reactFinalScore %></td>
-                <td scope="col"><%= student.placement %></td>
+                <td scope="col"><a href="/interviews/<%= interview._id %>/allocate/<%= student._id %>">Allocate</a></td>
             </tr>
         <%}%>
       </tbody>

@@ -1,39 +1,27 @@
-<div class="container m-5">
-  <form class="m-5 center-block" id="login-form" method="post">
-    <h3 class="mb-4">Sign Up</h3>
-    <div class="mb-3">
-      <label for="employeeName" class="form-label">Name</label>
-      <input type="name" class="form-control" name="name" id="employeeName" />
-    </div>
-    <div class="mb-3">
-      <label for="employeeEmail" class="form-label">Email address</label>
-      <input
-        type="email"
-        class="form-control"
-        name="email"
-        id="employeeEmail"
-      />
-    </div>
-    <div class="mb-3">
-      <label for="employeePassoword" class="form-label">Password</label>
-      <input
-        type="password"
-        class="form-control"
-        name="password"
-        id="employeePassoword"
-      />
-    </div>
-    <div class="mb-5">
-      <label for="employeePassoword" class="form-label">Confirm Password</label>
-      <input
-        type="password"
-        class="form-control"
-        name="confirmPassword"
-        id="employeePassoword"
-      />
-    </div>
-    <div class="d-grid">
-      <button type="submit" class="btn btn-primary btn-block">Submit</button>
-    </div>
-  </form>
-</div>
+<div class="sign-in-container">
+    <div class="sign-in-form-container">
+        <img src="/images/logo.png" alt='Logo' width="200" />
+
+        <form class="sign-in-form" action="/users/signup" method="post">
+            <label> Name</label>
+            <input type="text" class="sign-in-form-input" name="name"/>
+
+            <label> Email Address</label>
+            <input type="email" class="sign-in-form-input" name="email"/>
+
+            <label>Password</label>
+            <input type="password" class="sign-in-form-input" name="password" />
+
+            <label>Confirm Password</label>
+            <input type="password" class="sign-in-form-input" name="confirmPassword" />
+
+            <button type="submit" class="sign-in-form-button">Sign In</button>
+        </form>
+
+        <div class="sign-up-container">
+            Already Having account? <a href='/users/signin'>Sign In</a>
+        </div>
+    </div >
+</div >
+
+<link rel="stylesheet" href="/css/login.css" />

@@ -1,1 +1,32 @@
-<h1>Imternally</h1>
+
+<link rel="stylesheet" href="/css/students.css" />
+
+<div class="container mt-4">
+  <div class="header">
+    <h2>Interviews</h2>
+    <a href="/interviews/create" id="add-student" target="_blank" rel="noopener noreferrer">Create Interview</a>
+  </div>
+  <div class="student-table mt-3">
+    <% if (interviews.length == 0) { %> No Interview records found. Please create a
+    new interview. <% } else { %>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Date</th>
+          <th scope="col">Allocate Student</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (interview of interviews) {%>
+            <tr>
+                <td scope="col"><%= interview.company %></td>
+                <td scope="col"><%= dayjs(interview.date).format('MMM d, hh:mm A') %></td>
+                <td scope="col"><a href="/interviews/<%= interview._id %>/allocate">Allocate Student</a></td>
+            </tr>
+        <%}%>
+      </tbody>
+    </table>
+    <% } %>
+  </div>
+</div>
